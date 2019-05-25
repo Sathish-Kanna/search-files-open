@@ -17,7 +17,6 @@ platform_plasmoid
 ## Category
 **Configuration**
 Media
-Productivity
 
 ## Tags
 #open-file-search
