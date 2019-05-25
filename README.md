@@ -1,17 +1,14 @@
 ## About
-This skill allows to access linux applications and do process like launching and terminating them. If in case the application is not availabel in the desktop and asked to launch it responds with error message and when .It responds with error message when asked to launch the application that is not availabel in the desktop and simularly terminate application that is not runing.
+This skill allows to search and/or open file in linux system.
 
 ## Examples
-* "launch firefox"
-* "open firefox"
-* "close firefox"
-* "terminate firefox"
+* "search for apple using file search in desktop and open"
+* "open apple using file search in desktop"
 
 ## Category
-**Accessing Application**
+**Searching and opening File**
 
 ## Tags
-#launch
-#terminate
+#search for
+#using file search
 #open
-#close
