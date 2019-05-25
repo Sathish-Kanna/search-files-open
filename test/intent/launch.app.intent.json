@@ -1,0 +1,21 @@
+{
+    "utterance": "search for png using file search",
+    "intent_type": "search.file.open.intent",
+    "expected_dialog": "ask.where",
+    "responses": "",
+    "expected_dialog": "file.open.intent",
+    "responses": "",
+    "evaluation_timeout": 10
+}
+{
+    "utterance": "search for png using file search in home mypc downloads",
+    "intent_type": "search.file.open.intent",
+    "expected_dialog": "file.open.intent",
+    "responses": "",
+    "evaluation_timeout": 10
+}
+{
+    "utterance": "search for png using file search in downloads and open",
+    "intent_type": "search.file.open.intent",
+    "evaluation_timeout": 10
+}

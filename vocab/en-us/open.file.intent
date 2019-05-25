@@ -1,0 +1,2 @@
+open {file} using file search (in {location}|)
+
