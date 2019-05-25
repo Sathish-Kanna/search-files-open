@@ -1,4 +1,4 @@
-# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/linux.svg' card_color='#188FBA' width='50' height='50' style='vertical-align:bottom'/> File Search/Open
+# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/file.svg' card_color='#188FBA' width='50' height='50' style='vertical-align:bottom'/> File Search/Open
 Search and/or open file in Linux system.
 
 ## About
