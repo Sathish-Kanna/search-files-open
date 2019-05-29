@@ -14,7 +14,8 @@ from mycroft.util.parse import extract_number
 #  2: open file in linux desktop
 #    
 # Sample:
-#  search for init using file search in home Sathishkanna Downloads
+#  search for init using file search in home Username Downloads
+#  search for testfile using file search in Downloads
 #
 # TODO:
 #  1. case insensitive, proper '/'-ing and return path in checkNotDir()
@@ -32,6 +33,8 @@ class SearchFileOpen(MycroftSkill):
         userLoc = '/' + userLoc.replace(' ', '/')
         if os.path.isdir(userLoc):
             userLoc = '/' + userLoc + '/'
+        elif os.path.isdir(os.path.expanduser('~/'+userLoc)):
+            userLoc = os.path.expanduser('~/'+userLoc) + '/'
         else:
             return None
         return userLoc
@@ -59,7 +62,7 @@ class SearchFileOpen(MycroftSkill):
             self.speak_dialog("loc.notexist", data={"location": userLoc})
             return 
         userLoc = userDir
-        cmd = 'find ' + userLoc + " -type f -iname *'" + keyName.strip().replace(' ', '*') + "'*"
+        cmd = 'find ' + userLoc + " -type f -iname '*" + keyName.strip().replace(' ', '*') + "*'"
         return_value = str(subprocess.check_output(cmd, shell=True))[2:-1] # file search command
         fileLoc = return_value.split('\\n')
         
@@ -77,7 +80,7 @@ class SearchFileOpen(MycroftSkill):
                     openCmd = message.data['open'] 
                     
                 if 'no' in openCmd:
-                    self.speak_dialog("process.done.open")
+                    self.speak_dialog("process.done")
                     return
                 elif len(fileLoc) > 1 and len(fileLoc) < 3:
                     self.openFileOption(fileLoc)
